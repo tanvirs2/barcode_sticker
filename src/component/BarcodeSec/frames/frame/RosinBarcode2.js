@@ -86,7 +86,7 @@ class RosinBarcode2 extends Component {
 
                                 {/*******/}
 
-                                <table border={1} className="mt-4 text-center">
+                                <table border={1} className="mt-4 ml-4 text-center">
                                     <tbody>
                                         <tr>
                                             <td className="p-3"><h5>Article</h5></td>
