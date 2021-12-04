@@ -1,0 +1,17 @@
+.top-text {
+    position: absolute;
+    z-index: 3;
+    top: 5px;
+}
+
+.left-text {
+    left: 10px;
+}
+
+.middle-text {
+    left: 105px
+}
+
+.right-text {
+    right: 10px
+}
