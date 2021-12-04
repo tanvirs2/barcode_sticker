@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import BarcodePage from "../../barcode/BarcodePage";
-import thumbnail from "../../assets/img/codeimg.png";
+//import thumbnail from "../../assets/img/codeimg.png";
 import thumbnail1 from "../../assets/img/1.png";
 import thumbnail2 from "../../assets/img/2.png";
 import thumbnail3 from "../../assets/img/3.png";
@@ -11,7 +11,7 @@ class Frame extends Component {
 
     render() {
 
-        let {styleNo, size, sizeDesc, sl, barcode, topBarcode} = this.props;
+        let {size, sizeDesc, sl, barcode, topBarcode} = this.props;
 
         /*console.log(1);
         console.log(this.props);
@@ -27,7 +27,7 @@ class Frame extends Component {
                             {/*<div style={{position: "absolute", height: "157px", background:"red", width: "382px"}}>
 
                             </div>*/}
-                            <img src={thumbnail1}/>
+                            <img src={thumbnail1} alt={''}/>
 
                             <div style={{position: "absolute", top: "30px", right: "49px"}}>
                                 <h1>{size}</h1>
@@ -43,18 +43,18 @@ class Frame extends Component {
                         </div>
 
                         <div style={{height:"132px"}}>
-                            <img src={thumbnail2}/>
+                            <img src={thumbnail2} alt={''}/>
                         </div>
 
                         <div style={{position: "relative", height:"276px"}}>
-                            <img src={thumbnail3}/>
+                            <img src={thumbnail3} alt={''}/>
                             <div style={{position: "absolute", top: "70px", right: "25px"}}>
                                 <BarcodePage barcodeValue={barcode} enDataMatrix slNumber={sl}/>
                             </div>
                         </div>
 
                         <div style={{height:"165px"}}>
-                            <img src={thumbnail4}/>
+                            <img src={thumbnail4} alt={''}/>
                         </div>
 
                         {/*<div style={{ border: "2px solid black", position:"relative" }}>

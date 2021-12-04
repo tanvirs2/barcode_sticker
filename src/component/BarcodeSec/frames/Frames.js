@@ -1,12 +1,24 @@
 import React, {Component} from "react";
 import Frame from "./frame/Frame";
+import RosinBarcode from "./frame/RosinBarcode";
 
 
 class Frames extends Component {
 
     generateFrames() {
 
-        let {from, to, style, size, barcode} = this.props.formData;
+        let {frame, from, to, style, size, barcode} = this.props.formData;
+
+        let FrameName = '';
+
+        //console.log(frame);
+
+        if (frame === 'Rosin') {
+            FrameName = RosinBarcode;
+        } else {
+            FrameName = Frame;
+        }
+
 
         let frames = [];
 
@@ -14,7 +26,7 @@ class Frames extends Component {
 
         for (i; i<to; i++) {
 
-            frames.push(<Frame key={i} sl={i} styleNo={style} size={size} barcode={barcode}/>);
+            frames.push(<FrameName key={i} sl={i} styleNo={style} size={size} barcode={barcode}/>);
 
         }
 

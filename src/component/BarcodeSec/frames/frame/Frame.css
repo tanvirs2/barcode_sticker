@@ -15,3 +15,25 @@
 .right-text {
     right: 10px
 }
+
+
+.child-tbl {
+    border-collapse: collapse;
+}
+.child-tbl td, .child-tbl th {
+    border: 1px solid black;
+}
+.child-tbl tr:first-child th {
+    border-top: 0;
+}
+.child-tbl tr:last-child td {
+    border-bottom: 0;
+}
+.child-tbl tr td:first-child,
+.child-tbl tr th:first-child {
+    border-left: 0;
+}
+.child-tbl tr td:last-child,
+.child-tbl tr th:last-child {
+    border-right: 0;
+}
