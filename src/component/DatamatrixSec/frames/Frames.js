@@ -6,7 +6,11 @@ class Frames extends Component {
 
     generateFrames() {
 
-        let {from, to, style, size, barcode} = this.props.formData;
+        /*console.log(1);
+        console.log(this.props.formData);
+        console.log(1);*/
+
+        let {from, to, style, size, sizeDesc, barcode, topBarcode} = this.props.formData;
 
         let frames = [];
 
@@ -14,7 +18,7 @@ class Frames extends Component {
 
         for (i; i<to; i++) {
 
-            frames.push(<Frame key={i} sl={i} styleNo={style} size={size} barcode={barcode}/>);
+            frames.push(<Frame key={i} sl={i} styleNo={style} size={size} sizeDesc={sizeDesc} barcode={barcode} topBarcode={topBarcode}/>);
 
         }
 

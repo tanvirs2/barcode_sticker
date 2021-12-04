@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import BarcodePage from "../../barcode/BarcodePage";
-import QRCodePage from "../../qrcode/QRCodePage";
 import "./Frame.css"
 
 class Frame extends Component {
