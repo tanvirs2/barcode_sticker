@@ -11,7 +11,7 @@ class Frames extends Component {
 
         let FrameName = '';
 
-        //console.log(frame);
+        //console.log(style);
 
         if (frame === 'Rosin') {
             FrameName = RosinBarcode;
@@ -24,7 +24,7 @@ class Frames extends Component {
 
         let i=from;
 
-        for (i; i<to; i++) {
+        for (i; i<=to; i++) {
 
             frames.push(<FrameName key={i} sl={i} styleNo={style} size={size} barcode={barcode}/>);
 

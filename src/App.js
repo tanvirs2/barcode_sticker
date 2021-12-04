@@ -158,11 +158,11 @@ function RosinBarcodeComp() {
 
     let [formData, setFormData] = useState({
         frame: 'Rosin',
-        from: 1766230960,
-        to: 1766230965,
-        style:'WHJ55224',
+        from: 1,
+        to: 2,
+        style:'Master Item For E-Shop',
         size:'xl',
-        barcode: '(02)07169713380267(21)000001',
+        barcode: '(02)07169713380267(21)',
         printable: false
     });
 
