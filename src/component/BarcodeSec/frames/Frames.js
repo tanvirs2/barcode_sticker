@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Frame from "./frame/Frame";
 import RosinBarcode from "./frame/RosinBarcode";
+import RosinBarcode2 from "./frame/RosinBarcode2";
 
 
 class Frames extends Component {
@@ -15,6 +16,8 @@ class Frames extends Component {
 
         if (frame === 'Rosin') {
             FrameName = RosinBarcode;
+        } else if (frame === 'Rosin2') {
+            FrameName = RosinBarcode2;
         } else {
             FrameName = Frame;
         }

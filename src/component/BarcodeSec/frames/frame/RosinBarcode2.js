@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import BarcodePage from "../../barcode/BarcodePage";
 import "./Frame.css"
 
-class RosinBarcode extends Component {
+class RosinBarcode2 extends Component {
 
     render() {
 
@@ -95,28 +95,27 @@ class RosinBarcode extends Component {
                                                 <table className="child-tbl">
                                                     <tbody>
                                                         <tr>
-                                                            <td colSpan={7} className="border-top-0 text-center"><h5>Size</h5></td>
+                                                            <td colSpan={6} className="border-top-0 text-center"><h5>Size</h5></td>
                                                             <td className="border-top-0 text-center"><h5>Total</h5></td>
                                                         </tr>
                                                         <tr>
-                                                            <td className="text-center"><h6>128</h6></td>
-                                                            <td className="text-center"><h6>134</h6></td>
-                                                            <td className="text-center"><h6>140</h6></td>
-                                                            <td className="text-center"><h6>146</h6></td>
-                                                            <td className="text-center"><h6>152</h6></td>
-                                                            <td className="text-center"><h6>158</h6></td>
-                                                            <td className="text-center"><h6>164</h6></td>
+                                                            <td className="text-center"><h6>92</h6></td>
+                                                            <td className="text-center"><h6>98</h6></td>
+                                                            <td className="text-center"><h6>104</h6></td>
+                                                            <td className="text-center"><h6>110</h6></td>
+                                                            <td className="text-center"><h6>116</h6></td>
+                                                            <td className="text-center"><h6>122</h6></td>
                                                             <td className="text-center border-bottom-0" rowSpan={2}><h5>11</h5></td>
+
                                                         </tr>
 
                                                         <tr>
-                                                            <td><h6>2</h6></td>
-                                                            <td><h6>2</h6></td>
-                                                            <td><h6>2</h6></td>
-                                                            <td><h6>2</h6></td>
                                                             <td><h6>1</h6></td>
                                                             <td><h6>1</h6></td>
-                                                            <td><h6>1</h6></td>
+                                                            <td><h6>2</h6></td>
+                                                            <td><h6>2</h6></td>
+                                                            <td><h6>2</h6></td>
+                                                            <td><h6>3</h6></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -142,4 +141,4 @@ class RosinBarcode extends Component {
     }
 }
 
-export default RosinBarcode;
+export default RosinBarcode2;
