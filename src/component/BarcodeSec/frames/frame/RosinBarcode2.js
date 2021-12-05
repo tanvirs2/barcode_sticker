@@ -25,7 +25,7 @@ class RosinBarcode2 extends Component {
             return s;
         }
 
-        return <div style={{display:"inline-block"}}>
+        return <div className="mx-auto" style={{display:"block", width:"517px",}}>
             <div style={{ marginRight:0 }} className="mt-1 mr-2">
                 <div className="p-2">
                     <div>
@@ -86,13 +86,13 @@ class RosinBarcode2 extends Component {
 
                                 {/*******/}
 
-                                <table border={1} className="mt-4 ml-4 text-center">
+                                <table border={1} className="mt-4 mx-auto text-center">
                                     <tbody>
                                         <tr>
                                             <td className="p-3"><h5>Article</h5></td>
                                             <td className="p-3"><h5>Color</h5></td>
-                                            <td rowSpan={2}>
-                                                <table className="child-tbl">
+                                            <td rowSpan={2} className="p-0">
+                                                <table border="1">
                                                     <tbody>
                                                         <tr>
                                                             <td colSpan={6} className="border-top-0 text-center"><h5>Size</h5></td>

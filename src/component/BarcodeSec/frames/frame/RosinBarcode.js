@@ -25,7 +25,7 @@ class RosinBarcode extends Component {
             return s;
         }
 
-        return <div style={{display:"inline-block"}}>
+        return <div className="mx-auto" style={{display:"block", width:"517px",}}>
             <div style={{ marginRight:0 }} className="mt-1 mr-2">
                 <div className="p-2">
                     <div>
@@ -86,13 +86,13 @@ class RosinBarcode extends Component {
 
                                 {/*******/}
 
-                                <table border={1} className="mt-4 text-center">
+                                <table border={1} className="mt-4 mx-auto text-center">
                                     <tbody>
                                         <tr>
                                             <td className="p-3"><h5>Article</h5></td>
                                             <td className="p-3"><h5>Color</h5></td>
-                                            <td rowSpan={2}>
-                                                <table className="child-tbl">
+                                            <td rowSpan={2} className="p-0">
+                                                <table border="1">
                                                     <tbody>
                                                         <tr>
                                                             <td colSpan={7} className="border-top-0 text-center"><h5>Size</h5></td>
@@ -110,20 +110,20 @@ class RosinBarcode extends Component {
                                                         </tr>
 
                                                         <tr>
-                                                            <td><h6>2</h6></td>
-                                                            <td><h6>2</h6></td>
-                                                            <td><h6>2</h6></td>
-                                                            <td><h6>2</h6></td>
-                                                            <td><h6>1</h6></td>
-                                                            <td><h6>1</h6></td>
-                                                            <td><h6>1</h6></td>
+                                                            <td className="border-bottom-0 text-center"><h6>2</h6></td>
+                                                            <td className="border-bottom-0 text-center"><h6>2</h6></td>
+                                                            <td className="border-bottom-0 text-center"><h6>2</h6></td>
+                                                            <td className="border-bottom-0 text-center"><h6>2</h6></td>
+                                                            <td className="border-bottom-0 text-center"><h6>1</h6></td>
+                                                            <td className="border-bottom-0 text-center"><h6>1</h6></td>
+                                                            <td className="border-bottom-0 text-center"><h6>1</h6></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td><h6>S22FF3-0J31kg-33</h6></td>
+                                            <td><h6>S22FF3-0J31tg-33</h6></td>
                                             <td><h6>Yellow</h6></td>
                                         </tr>
                                     </tbody>

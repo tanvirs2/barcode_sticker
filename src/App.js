@@ -162,7 +162,7 @@ function RosinBarcodeComp() {
         to: 2,
         style:'Master Item For E-Shop',
         size:'xl',
-        barcode: '(02)07169713380267(21)',
+        barcode: '(02)07759109170611(21)',
         printable: false
     });
 
