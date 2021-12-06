@@ -568,7 +568,7 @@ function App() {
       <Router>
           <div>
               <div className="container pt-5" style={{height: "400px", background: "#F0F8FF", borderRadius: "15px", border: "1px solid black"}}>
-                  <div className="text-center pt-5 pt-5" style={{}}>
+                  <div className="text-center" style={{ paddingTop: "8rem"}}>
 
                       <Link to="/rosin1">
                           <Button variant="success">Rosin1</Button>
