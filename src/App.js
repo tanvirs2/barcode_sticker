@@ -154,7 +154,7 @@ function BarcodeComp() {
 
 function RosinBarcodeComp() {
 
-    let componentRef;
+    //let componentRef;
 
     let [formData, setFormData] = useState({
         frame: 'Rosin',
@@ -231,12 +231,7 @@ function RosinBarcodeComp() {
 
                                 <InputGroup.Prepend>
                                     &nbsp;
-                                    <ReactToPrint
-                                        trigger={() => {
-                                            return <Button variant="success" type="button" disabled={isSubmitting}>Print</Button>;
-                                        }}
-                                        content={() => componentRef}
-                                    />
+
 
                                 </InputGroup.Prepend>}
                             </InputGroup>
@@ -274,7 +269,7 @@ function RosinBarcodeComp() {
 
 
 
-            <Frames formData={formData} ref={el => (componentRef = el)} />
+            <Frames formData={formData} />
 
 
         </Container>
@@ -283,7 +278,7 @@ function RosinBarcodeComp() {
 
 function RosinBarcodeComp2() {
 
-    let componentRef;
+    //let componentRef;
 
     let [formData, setFormData] = useState({
         frame: 'Rosin2',
@@ -360,12 +355,7 @@ function RosinBarcodeComp2() {
 
                                 <InputGroup.Prepend>
                                     &nbsp;
-                                    <ReactToPrint
-                                        trigger={() => {
-                                            return <Button variant="success" type="button" disabled={isSubmitting}>Print</Button>;
-                                        }}
-                                        content={() => componentRef}
-                                    />
+
 
                                 </InputGroup.Prepend>}
                             </InputGroup>
@@ -403,7 +393,7 @@ function RosinBarcodeComp2() {
 
 
 
-            <Frames formData={formData} ref={el => (componentRef = el)} />
+            <Frames formData={formData} />
 
 
         </Container>
@@ -577,8 +567,9 @@ function App() {
   return (
       <Router>
           <div>
-              <Container>
-                  <div>
+              <div className="container pt-5" style={{height: "400px", background: "#F0F8FF", borderRadius: "15px", border: "1px solid black"}}>
+                  <div className="text-center pt-5 pt-5" style={{}}>
+
                       <Link to="/rosin1">
                           <Button variant="success">Rosin1</Button>
                       </Link>
@@ -599,7 +590,7 @@ function App() {
                           <Button>QRcode</Button>
                       </Link>
                   </div>
-              </Container>
+              </div>
 
               <Switch>
                   <Route path="/" exact>

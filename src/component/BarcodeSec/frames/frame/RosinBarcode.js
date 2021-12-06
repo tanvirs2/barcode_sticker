@@ -25,13 +25,13 @@ class RosinBarcode extends Component {
             return s;
         }
 
-        return <div className="mx-auto" style={{display:"block", width:"517px",}}>
+        return <div className="mx-auto" style={{display:"block", width:"525px",}}>
             <div style={{ marginRight:0 }} className="mt-1 mr-2">
                 <div className="p-2">
                     <div>
 
                         <div style={{ border: "2px solid black", position:"relative" }}>
-                            <div className="px-3 pt-3 pb-1" style={{height:"450px", width:"490px", zIndex:5}}>
+                            <div className="px-3 pt-3 pb-1" style={{height:"450px", width:"500px", zIndex:5}}>
 
 
                                 <div className="ml-4">
