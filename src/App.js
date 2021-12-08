@@ -400,6 +400,130 @@ function RosinBarcodeComp2() {
     );
 }
 
+function RosinBarcodeComp3() {
+
+    //let componentRef;
+
+    let [formData, setFormData] = useState({
+        frame: 'Rosin3',
+        from: 8016,
+        to: 8023,
+        style:'S22BG1-BBTT-1ib-ZZ',
+        size:'10',
+        barcode: '0000265000703000',
+        printable: false
+    });
+
+    useEffect(()=>{
+        if (!formData.printable) {
+            if (formData.from < formData.to) {
+                setFormData({...formData, printable:true})
+            }
+        }
+
+    }, [formData])
+
+    return (
+        <Container>
+            <Formik initialValues={formData}
+
+                    onSubmit={(values, { setSubmitting }) => {
+
+                        //console.log(values);
+                        setSubmitting(false);
+
+                        setFormData(values); //my define State
+                    }}
+            >
+                {
+                    ({
+                         values,
+                         errors,
+                         touched,
+                         handleChange,
+                         handleBlur,
+                         handleSubmit,
+                         isSubmitting,
+                     }) => (
+
+
+                        <form onSubmit={handleSubmit}>
+
+                            <InputGroup className="my-3 ">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text>From</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <FormControl
+                                    aria-label="Default"
+                                    type="number"
+                                    name="from"
+                                    onChange={handleChange} required
+                                    onBlur={handleBlur}
+                                    value={values.from}
+                                />
+                                &nbsp;
+                                &nbsp;
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text>To</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <FormControl
+                                    aria-label="Default"
+                                    type="number"
+                                    name="to"
+                                    min={formData.from}
+                                    onChange={handleChange} required
+                                    onBlur={handleBlur}
+                                    value={values.to}
+                                />
+                                {formData.printable &&
+
+                                <InputGroup.Prepend>
+                                    &nbsp;
+
+
+                                </InputGroup.Prepend>}
+                            </InputGroup>
+
+
+                            <InputGroup size="sm" className="mb-3">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text >Art</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <FormControl aria-label="Small" type="text" name="style" onChange={handleChange} required onBlur={handleBlur} value={values.style}/>
+                                &nbsp;
+                                &nbsp;
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text>TTL MI</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <FormControl aria-label="Small" name="size" type="text" onChange={handleChange} required onBlur={handleBlur} value={values.size}/>
+                                &nbsp;
+                                &nbsp;
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text>Barcode</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <FormControl aria-label="Small" name="barcode" type="text" onChange={handleChange} required onBlur={handleBlur} value={values.barcode}/>
+
+                                &nbsp;
+                                &nbsp;
+                                <InputGroup.Prepend>
+                                    <Button type="submit" disabled={isSubmitting}>Create Barcode Sticker</Button>
+                                </InputGroup.Prepend>
+
+                            </InputGroup>
+
+                        </form>
+                    )}
+            </Formik>
+
+
+
+            <Frames formData={formData} />
+
+
+        </Container>
+    );
+}
+
 function DatamatrixComp() {
 
     let componentRef;
@@ -567,8 +691,8 @@ function App() {
   return (
       <Router>
           <div>
-              <div className="container pt-5" style={{height: "400px", background: "#F0F8FF", borderRadius: "15px", border: "1px solid black"}}>
-                  <div className="text-center" style={{ paddingTop: "8rem"}}>
+              <div className="container" id="top-btn-box" style={{height: "400px", background: "#F0F8FF", borderRadius: "15px", border: "1px solid black"}}>
+                  <div className="text-center" style={{ paddingTop: "11rem"}}>
 
                       <Link to="/rosin1">
                           <Button variant="success">Rosin1</Button>
@@ -581,6 +705,13 @@ function App() {
                       </Link>
 
                       &nbsp;
+
+                      <Link to="/rosin3">
+                          <Button variant="success">Rosin3</Button>
+                      </Link>
+
+                      &nbsp;
+
                       <Link to="/barcode">
                           <Button>Barcode</Button>
                       </Link>
@@ -603,6 +734,10 @@ function App() {
 
                   <Route path="/rosin2" exact>
                       <RosinBarcodeComp2/>
+                  </Route>
+
+                  <Route path="/rosin3" exact>
+                      <RosinBarcodeComp3/>
                   </Route>
 
                   <Route path="/barcode" exact>

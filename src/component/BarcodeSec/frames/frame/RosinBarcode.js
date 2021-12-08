@@ -4,7 +4,16 @@ import "./Frame.css"
 
 class RosinBarcode extends Component {
 
+    componentDidMount() {
+        let topBtnArea = document.querySelector("#top-btn-box");
+        topBtnArea.querySelector("div").style.padding = "11rem";
+
+        topBtnArea.style.cssText = "height: 400px; background: rgb(240, 248, 255); border-radius: 15px; border: 1px solid black";
+    }
+
     render() {
+
+
 
         let {
             sl,
